@@ -25,7 +25,7 @@ ROLE_TYPES = {
 
 DEBATER_PERSONA = {
     "grade": getGradePersona,
-    "UwU": "You use extremely exaggerated UwU furry speak.",
+    "furry": "You use extremely exaggerated UwU furry speak.",
     "disinformation": (
         "You don't actually know ANYTHING about the topic at hand, but you pretend you do. "
         "Try to make up stuff as you go and disregard actual facts."

@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Python venv
+
+debatse-backend/Include
+debatse-backend/Lib
+debatse-backend/Scripts

@@ -1,7 +1,31 @@
 from openai import OpenAI
 from flask import Flask
 app = Flask(__name__)
-client = OpenAI()
+GPTResponse = OpenAI().chat.completions.create
+
+class AIActor:
+    def __init__():
+        pass
+    def getResponse(self):
+
+        return GPTResponse(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": (
+                    f"{ROLE_DESCS.get(self.role)} \n\n"
+                )}
+            ]
+        )
+
+
+class Judge(AIActor):
+    def __init__(self):
+        self.role = "Judge"
+
+class Debater(AIActor):
+    def __init__(self, personas: dict):
+        self.role = "Debater"
+        self.personas = personas
 
 def getGradePersona(grade: int) -> str:
     SUFFIXES = {
@@ -13,7 +37,7 @@ def getGradePersona(grade: int) -> str:
 
     return "You read at a {grade}{suffix} grade level."
 
-ROLE_TYPES = {
+ROLE_DESCS = {
     "judge": (
         "You are a judge in a debate. Determine who is winning the debate "
         "and provide a score from 0-1 (0: Player B is completely winning, 1: Player A is completely winning)"

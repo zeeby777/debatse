@@ -1,6 +1,11 @@
 from openai import OpenAI
 from flask import Flask
+from flask import request, jsonify
+from flask_cors import CORS
+import json
+
 app = Flask(__name__)
+CORS(app)
 GPTResponse = OpenAI().chat.completions.create
 
 class AIActor:
@@ -27,15 +32,15 @@ class Debater(AIActor):
         self.role = "Debater"
         self.personas = personas
 
-def getGradePersona(grade: int) -> str:
-    SUFFIXES = {
-        1: "st",
-        2: "nd",
-        3: "rd"
-    }
-    suffix = SUFFIXES.get(grade, "th")
-
-    return "You read at a {grade}{suffix} grade level."
+#def getGradePersona(grade: int) -> str:
+#    SUFFIXES = {
+#        1: "st",
+#        2: "nd",
+#        3: "rd"
+#    }
+#    suffix = SUFFIXES.get(grade, "th")
+#
+#    return "You read at a {grade}{suffix} grade level."
 
 ROLE_DESCS = {
     "judge": (
@@ -48,7 +53,8 @@ ROLE_DESCS = {
 }
 
 DEBATER_PERSONA = {
-    "grade": getGradePersona,
+    #"grade": getGradePersona,
+    "5thGrade": "You read at a 5th grade level.",
     "furry": "You use extremely exaggerated UwU furry speak.",
     "disinformation": (
         "You don't actually know ANYTHING about the topic at hand, but you pretend you do. "
@@ -61,4 +67,8 @@ DEBATER_PERSONA = {
 
 @app.route("/response")
 def response():
-    pass
+    data = request.form
+
+@app.route("/debater_personas_index")
+def debater_personas_index():
+    return json.load(open("debater_personas_info.json"))

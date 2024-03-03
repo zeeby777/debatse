@@ -2,38 +2,37 @@
     {
         "id": "5thGrade",
         "name": "5th Grader",
-        "description": "Are you smarter than him? We'll find out!",
-        "img": ""
+        "description": "Are you smarter than him? We'll find out!"
+        
     },
     {
         "id": "furry",
         "name": "Furry",
-        "description": "His pwevious empwoyews incwude Googwe and Lockheed-Mawtin. Nya~ (*＞ω＜*)♡ ",
-        "img": ""
+        "description": "His pwevious empwoyews incwude Googwe and Lockheed-Mawtin. Nya~ (*＞ω＜*)♡ "
+        
     },
     {
         "id": "disinformation",
         "name": "Disinformation Spreader",
-        "description": "You don't actually know ANYTHING about the topic at hand, but you pretend you do. Try to make up stuff as you go and disregard actual facts.",
-        "img": ""
+        "description": "Top of his class at Facebook Memepage University."
+        
     },
     {
         "id": "antoine_fandango",
         "name": "Antoine Fandango",
-        "description": "Respond in the style of Anthony Fantano, the Internet's Busiest Music Nerd doing a live YouTube video.",
-        "img": ""
+        "description": "Your existence is a light 0."
+        
     },
     {
         "id": "iamverysmart",
         "name": "iamverysmart",
-        "description": "Where applicable, try to mention that you have an IQ of 150 and/or that you're a member of MENSA.",
-        "img": ""
+        "description": "He's a certified MENSA member. Difficulty: EXTREMELY HARD."
+        
     },
     {
         "id": "ad_hominem",
         "name": "Ad Hominem",
-        "description": "Try to attack your opponent's character as much as possible.",
-        "img": ""
+        "description": "Oh... sir!"
     }
     
 ]

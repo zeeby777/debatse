@@ -22,24 +22,25 @@
 </script>
 
 
-<div>
-    <div>
-        <h3>{selectedPersona?.name}</h3>
-        <p>{selectedPersona?.description}</p>
+<div class="component">
+    <h2>Your opponent:</h2>
+    <div class="infoContainer">
+        <h3 class="personaName">{selectedPersona?.name}</h3>
+        <div class="description">{selectedPersona?.description}</div>
         <img class="personaPortrait" alt={selectedPersona?.name} src={`public/portraits/${selectedPersona?.id}.png`}>
-    </div>
-    <div>
-        <button on:click={() => { incrementPersonasIndex(-1) }}>
-            <img src="public/rightarrow.png" alt="left arrow" class="arrowButton leftArrowImage">
-        </button>
-        <button on:click={() => { incrementPersonasIndex(1) }}>
-            <img src="public/rightarrow.png" alt="right arrow" class="arrowButton">
-        </button>
+        <div class="buttonsContainer">
+            <button on:click={() => { incrementPersonasIndex(-1) }}>
+                <img src="public/rightarrow.png" alt="left arrow" class="arrow leftArrowImage">
+            </button>
+            <button on:click={() => { incrementPersonasIndex(1) }}>
+                <img src="public/rightarrow.png" alt="right arrow" class="arrow">
+            </button>
+        </div>
     </div>
 </div>
 
 <style>
-    .arrowButton{
+    .arrow{
         height: 64px;
         width: 64px;
     }
@@ -49,5 +50,32 @@
     .personaPortrait{
         width: 256px;
         height: 256px;
+    }
+    button{
+        border: none;
+        background-color:transparent;
+        cursor:grab;
+    }
+    .description{
+        margin: 0px;
+        height: 20%;
+    }
+    .component{
+        display: flex;
+        text-align: center;
+        width: 40%;
+        max-width: 40%;
+        height: 100%;
+        align-content: center;
+        flex-direction:column;
+        border: 1px solid brown;
+    }
+    .personaName{
+        margin: 0px;
+    }
+    .buttonsContainer{
+        position: absolute;
+        bottom: 0;
+        margin: auto;
     }
 </style>

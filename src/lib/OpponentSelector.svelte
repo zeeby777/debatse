@@ -48,8 +48,8 @@
         transform: scaleX(-1);
     }
     .personaPortrait{
-        width: 256px;
-        height: 256px;
+        width: 20vh;
+        height: 20vh;
     }
     button{
         border: none;

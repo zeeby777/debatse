@@ -10,6 +10,6 @@
   </div>
 </main>
 
-<style>
+<style src="src/">
 
 </style>
